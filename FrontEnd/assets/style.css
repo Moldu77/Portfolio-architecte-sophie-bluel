@@ -204,6 +204,40 @@ li:hover {
   text-align: center;
   margin-bottom: 1em;
 }
+
+/* ajout du style des bouttons filtres */
+.filters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+ 
+}
+
+.filters-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-family: "Syne";
+  color: #1d6154;
+  font-weight: 700;
+  background-color: #f0f0f0;
+  border: 1px solid #1d6154;
+  border-radius: 60px;
+  font-size:16px;
+  
+}
+
+.filters-container button:nth-child(1) {
+  width:100px;
+  padding: 10px;
+}
+
+.filters-container button:hover {
+  background-color: #1d6154;
+  color: white;
+  cursor: pointer;
+}
+
 .gallery {
   width: 100%;
   display: grid;
