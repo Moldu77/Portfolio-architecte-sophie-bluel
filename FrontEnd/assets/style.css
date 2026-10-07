@@ -176,6 +176,7 @@ nav li {
 
 li:hover {
   color: #b1663c;
+  cursor: pointer;
 }
 #introduction {
   display: flex;
@@ -211,7 +212,6 @@ li:hover {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
- 
 }
 
 .filters-container button {
@@ -223,12 +223,11 @@ li:hover {
   background-color: #f0f0f0;
   border: 1px solid #1d6154;
   border-radius: 60px;
-  font-size:16px;
-  
+  font-size: 16px;
 }
 
 .filters-container button:nth-child(1) {
-  width:100px;
+  width: 100px;
   padding: 10px;
 }
 
@@ -295,4 +294,71 @@ footer nav ul {
   display: flex;
   justify-content: flex-end;
   margin: 2em;
+}
+
+/* ajout du style de la page de connexion */
+
+body {
+  background-color: #FFFEF8;
+  margin: 0 auto;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  padding: 50px;
+  max-width: 1400px;
+  gap: 20px;
+}
+.login-container form {
+  display: block;
+  max-width: 379px;
+  width: 100%;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Syne";
+  font-size: 14px;
+}
+.login-container input {
+  padding: 20px;
+  margin-bottom: 20px;
+  border:none;
+  border-radius: 5px;
+  max-width: 379px;
+  width: 100%;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+.login-container input:hover {
+  outline: 1px solid #1d6154;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+.login-button {
+  background-color: #1d6154;
+  color: white;
+  font-family: "Syne";
+  font-weight: 700;
+  display: block;
+  margin: 10px auto;
+  width: 180px;
+  padding: 8px 25px;
+  border-radius: 60px;
+  border: none;
+}
+.mdp-oublie {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: black;
+  
 }
