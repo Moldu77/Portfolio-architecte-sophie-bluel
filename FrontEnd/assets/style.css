@@ -105,9 +105,7 @@ nav,
 section {
   display: block;
 }
-body {
-  line-height: 1;
-}
+
 ol,
 ul {
   list-style: none;
@@ -129,10 +127,12 @@ table {
 }
 /** end reset css**/
 body {
-  max-width: 1140px;
-  margin: auto;
+  max-width: 1440px;
   font-family: "Work Sans";
   font-size: 14px;
+  background-color: #fffef8;
+  margin: 0 auto;
+  line-height: 1;
 }
 header {
   display: flex;
@@ -157,13 +157,33 @@ h1 > span {
   font-size: 10px;
   letter-spacing: 0.1em;
 }
+/* ajout du style sur le h2 et button mode édition */
+.projects-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit-btn {
+  border: none;
+  background-color: #fffef8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  font-size:14px;
+  display: none;
+}
+
 
 h2 {
   font-family: "Syne";
-  font-weight: 700;
   font-size: 30px;
   color: #1d6154;
+  margin: 1em;
 }
+
 nav ul {
   display: flex;
   align-items: center;
@@ -298,10 +318,6 @@ footer nav ul {
 
 /* ajout du style de la page de connexion */
 
-body {
-  background-color: #FFFEF8;
-  margin: 0 auto;
-}
 .login-container {
   display: flex;
   flex-direction: column;
@@ -332,7 +348,7 @@ body {
 .login-container input {
   padding: 20px;
   margin-bottom: 20px;
-  border:none;
+  border: none;
   border-radius: 5px;
   max-width: 379px;
   width: 100%;
@@ -367,5 +383,20 @@ body {
   text-align: center;
   margin-top: 10px;
   color: black;
-  
+}
+
+/* ajout du style de la page d'édition */
+.edition-bar {
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto 30px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.2em;
+  display: none;
 }

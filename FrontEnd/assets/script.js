@@ -33,6 +33,10 @@ fetch("http://localhost:5678/api/categories")
     const filtersContainer = document.createElement("div");
     filtersContainer.classList.add("filters-container");
     portfolioTitle.after(filtersContainer);
+    //verification si l'utilisateur est connecté pour afficher ou non les filtres//
+    if (localStorage.getItem("token")) {
+      filtersContainer.style.display = "none";
+    }
 
     //boutton "Tous" pour afficher tous les projets//
     const allButton = document.createElement("button");
@@ -62,4 +66,27 @@ function filterProjects(event) {
       figure.style.display = "none";
     }
   }
+}
+
+//mode edition//
+//verification si l'utilisateur est connecté//
+if (localStorage.getItem("token")) {
+  //affichage de la barre d'édition//
+  const editionBar = document.querySelector(".edition-bar");
+  editionBar.style.display = "flex";
+  //changement du texte du bouton login en logout//
+  const logout = document.querySelector(".login-btn");
+  logout.textContent = "logout";
+  //ajout de l'event listener pour le logout//
+  logout.addEventListener("click", (event) => {
+    //annulation de l'veenmenet par defaut qui renvoie sur login.html//
+    event.preventDefault();
+    localStorage.removeItem("token");
+    //redirection vers la page de login//
+    window.location.href = "index.html";
+  });
+  //ajout du btn modifier//
+  const btnEdition = document.querySelector(".edit-btn");
+  btnEdition.style.display = "flex";
+  
 }
