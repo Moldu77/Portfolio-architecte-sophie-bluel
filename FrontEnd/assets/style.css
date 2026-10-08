@@ -355,6 +355,13 @@ body {
   border-radius: 60px;
   border: none;
 }
+
+.login-button:hover {
+  background-color: #b1663c;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  transform: scale(1.05);
+}
 .mdp-oublie {
   display: block;
   text-align: center;
