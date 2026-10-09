@@ -62,8 +62,21 @@
       <section id="portfolio">
         <div class="projects-title">
           <h2>Mes Projets</h2>
-          <button class="edit-btn"> <img src=".\assets\icons\editeur-black.svg" alt="logo éditeur" /> modifier</button>
+          <button class="edit-btn">
+            <img src=".\assets\icons\editeur-black.svg" alt="logo éditeur" />
+            modifier
+          </button>
         </div>
+        <aside id="modal1" aria-hidden="true" aria-modal="false" >
+          <div role="dialog" class="modal-div">
+           <img src=".\assets\icons\coix.svg" alt="croix de fermetur de la modale" class="modal-crosse">
+            <h3>Galerie Photo</h3>
+            <div class="photo-modal">
+              <!-- affiachage des projets a modifier avec le JS -->
+            </div>
+            <button class="btn-add-photo">Ajouter une photo</button>
+          </div>
+        </aside>
         <div class="gallery">
           <!-- /** Les projets seront affichés ici par le script JavaScript **/ -->
         </div>

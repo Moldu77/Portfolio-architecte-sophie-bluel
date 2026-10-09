@@ -171,11 +171,10 @@ h1 > span {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap:5px;
-  font-size:14px;
+  gap: 5px;
+  font-size: 14px;
   display: none;
 }
-
 
 h2 {
   font-family: "Syne";
@@ -264,7 +263,85 @@ li:hover {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+/**AJout de la modal**/
 
+aside {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.09);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modal-div {
+  background-color: white;
+  width: 630px;
+  height: 620px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-crosse{
+  display: inline;
+  align-self: flex-end;
+  padding: 20px 30px;
+  width:12px;
+  cursor: pointer;
+}
+.modal-div h3{
+  font-family: Work Sans;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 2;
+}
+
+.photo-modal{
+  max-width:420px;
+  width: 100%;
+  border-bottom:1px solid #B3B3B3;
+  overflow-y: auto;
+  height:400px;
+  max-height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,1fr);
+  gap : 15px;
+  
+}
+.work-item{
+  position: relative;
+  z-index: 1;
+}
+.work-item-img{
+  width: 100%;
+
+}
+
+.trash-btn{
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.btn-add-photo{
+  background-color: #1d6154;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  width:240px;
+  color: #f0f0f0;
+  font-size: large;
+  cursor: pointer;
+}
 .gallery img {
   width: 100%;
 }
