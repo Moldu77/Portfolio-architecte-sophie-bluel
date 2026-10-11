@@ -67,14 +67,71 @@
             modifier
           </button>
         </div>
-        <aside id="modal1" aria-hidden="true" aria-modal="false" >
-          <div role="dialog" class="modal-div">
-           <img src=".\assets\icons\coix.svg" alt="croix de fermetur de la modale" class="modal-crosse">
-            <h3>Galerie Photo</h3>
+
+        <aside id="modal1" aria-hidden="true" aria-modal="false">
+          <div
+            role="dialog"
+            class="modal-div"
+            aria-hidden="false"
+            aria-labelledby="gallery-modal-title"
+          >
+            <img
+              src=".\assets\icons\coix.svg"
+              alt="croix de fermeture de la modale"
+              class="modal-crosse"
+            />
+            <h3 id="gallery-modal-title">Galerie photo</h3>
             <div class="photo-modal">
               <!-- affiachage des projets a modifier avec le JS -->
             </div>
             <button class="btn-add-photo">Ajouter une photo</button>
+          </div>
+
+          <div
+            role="dialog"
+            class="add-photo-container"
+            aria-hidden="true"
+            aria-labelledby="add-photo-modal-title"
+          >
+            <img
+              src=".\assets\icons\arrow-left.svg"
+              alt="flèche de retour vers la galerie"
+              class="modal-back-arrow"
+            />
+            <img
+              src=".\assets\icons\coix.svg"
+              alt="croix de fermeture de la modale"
+              class="modal-crosse"
+            />
+            <h3 id="add-photo-modal-title">Ajout photo</h3>
+            <form method="post" class="add-photo-form">
+              <div class="drag-picture-area">
+                <img
+                  src=".\assets\icons\gallery.svg"
+                  alt="image de galerie pour déposer sa photo"
+                  class="drag-picture-icon"
+                />
+                <label for="image" class="btn-drag-picture">+ Ajouter photo</label>
+                <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  accept="image/png, image/jpeg"
+                  hidden
+                />
+                <p>jpg, png : 4mo max</p>
+              </div>
+              <label for="title">Titre</label>
+              <input type="text" id="title" name="title" />
+              <label for="categorie">Catégorie</label>
+              <select id="categorie" name="category">
+                <option value=""></option>
+              </select>
+              <hr class="add-photo-separator" />
+              <button type="submit" class="btn-add-picture-validation-form">
+                Valider
+              </button>
+            </form>
           </div>
         </aside>
         <div class="gallery">
