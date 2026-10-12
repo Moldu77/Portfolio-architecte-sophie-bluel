@@ -95,8 +95,12 @@ if (localStorage.getItem("token")) {
 
   const editBtn = document.querySelector(".edit-btn");
   const modal = document.getElementById("modal1");
-  const crosse = document.querySelector(".modal-crosse");
-  crosse.addEventListener("click", closeModal);
+  const crosse = document.querySelectorAll(".modal-crosse");
+
+  // recuperation des deux croix de chaque modal pour la fermeture avec la boucle foreach//
+  crosse.forEach((crosses) =>{
+   crosses.addEventListener("click", closeModal);
+  });
   editBtn.addEventListener("click", () => {
     modal.setAttribute("aria-hidden", "false");
     modal.style.display = "flex";
@@ -174,4 +178,35 @@ if (localStorage.getItem("token")) {
         });
       }
     });
+}
+
+//affichage de la deuxieme modal form photo//
+
+//recuperation des elements pour l'affichage de la modal autres actions//
+const buttonAddPhoto = document.querySelector('.btn-add-photo');
+const modalGallery = document.querySelector('.modal-div');
+const modalPhotoContainer = document.querySelector('.add-photo-container');
+
+//bascule modal-div a modalForm//
+
+buttonAddPhoto.addEventListener("click",showAddPhoto);
+
+function showAddPhoto(){
+  modalGallery.style.display="none";
+  modalGallery.setAttribute("aria-hidden","true");
+  modalPhotoContainer.style.display ="flex";
+  modalPhotoContainer.setAttribute("aria-hidden","false");
+}
+
+//fermeture modalForm pour retourner sur la modalGallery//
+
+const backButton = document.querySelector('.modal-back-arrow');
+
+backButton.addEventListener("click",showGallery);
+
+function showGallery(){
+   modalGallery.style.display="flex";
+  modalGallery.setAttribute("aria-hidden","false");
+  modalPhotoContainer.style.display ="none";
+  modalPhotoContainer.setAttribute("aria-hidden","true");
 }
