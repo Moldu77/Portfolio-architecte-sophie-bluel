@@ -263,6 +263,19 @@ margin-left: calc(-50vw + 50%);
   border: 1px solid #1d6154;
   border-radius: 60px;
   font-size: 16px;
+  
+}
+
+.projects-title{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.edit-btn{
+position: absolute;
+right:750px ;
+  
 }
 
 .filters-container button:nth-child(1) {

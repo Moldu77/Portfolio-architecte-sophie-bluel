@@ -96,7 +96,8 @@ if (localStorage.getItem("token")) {
 
   //ajout du btn modifier//
   const btnEdition = document.querySelector(".edit-btn");
-  btnEdition.style.display = "block";
+  btnEdition.style.display = "flex";
+
 
   //affichage de la modal//
 
