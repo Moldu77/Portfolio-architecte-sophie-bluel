@@ -257,9 +257,9 @@ if (localStorage.getItem("token")) {
     if (!file) {
       return;
     }
-    //verification de la size du file//
-    if (file.size > 4 * 1024 * 1024) {
-      alert("le fichier est trop lourd");
+    //verification de la size et du type du file//
+    if (file.size > 4 * 1024 * 1024 || (file.type !== "image/png" && file.type !=="image/jpeg")) {
+      alert("le fichier est trop lourd ou le type n'est pas PNG ou JPEG");
       addPictureInput.value = "";
       return;
     }
