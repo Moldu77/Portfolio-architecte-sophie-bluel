@@ -289,6 +289,12 @@ right:750px ;
   cursor: pointer;
 }
 
+.filters-container button:focus{
+   background-color: #1d6154;
+   color: white;
+}
+
+
 .gallery {
   width: 100%;
   display: grid;
@@ -520,11 +526,16 @@ aside {
   font-family: "Syne";
   font-weight: 700;
   font-size: 14px;
+ 
+}
+
+.btn-add-picture-validation-form:not(:disabled){
+  background-color: #1d6154;
   cursor: pointer;
 }
 
-.btn-add-picture-validation-form:hover{
-  background-color: #1d6154;
+.btn-add-picture-validation-form:disabled{
+  background-color: #a7a7a7;
 }
 
 .preview-img{

@@ -98,7 +98,6 @@ if (localStorage.getItem("token")) {
   const btnEdition = document.querySelector(".edit-btn");
   btnEdition.style.display = "flex";
 
-
   //affichage de la modal//
 
   const editBtn = document.querySelector(".edit-btn");
@@ -241,6 +240,9 @@ if (localStorage.getItem("token")) {
     modalPhotoContainer.setAttribute("aria-hidden", "true");
     resetPictureArea();
     formSubmit.reset();
+    //action sur le bouton du form pour qu'il reste grisé
+    //
+    checkForm();
     const errorMessage = document.querySelector(".errorMsg");
     errorMessage.textContent = "";
   }
@@ -258,9 +260,13 @@ if (localStorage.getItem("token")) {
       return;
     }
     //verification de la size et du type du file//
-    if (file.size > 4 * 1024 * 1024 || (file.type !== "image/png" && file.type !=="image/jpeg")) {
+    if (
+      file.size > 4 * 1024 * 1024 ||
+      (file.type !== "image/png" && file.type !== "image/jpeg")
+    ) {
       alert("le fichier est trop lourd ou le type n'est pas PNG ou JPEG");
       addPictureInput.value = "";
+      checkForm();
       return;
     }
 
@@ -294,22 +300,37 @@ if (localStorage.getItem("token")) {
     });
 
   //validation du formulaire et reset//
-
+  const inputTitle = document.getElementById("title");
+  const selectInputForm = document.getElementById("categorie");
+  const errorMessage = document.querySelector(".errorMsg");
   const formSubmit = document.querySelector(".add-photo-form");
+  const btnAddPhoto = document.querySelector(
+    ".btn-add-picture-validation-form",
+  );
+  function checkForm() {
+    if (
+      inputTitle.value.trim() === "" ||
+      selectInputForm.value === "" ||
+      !addPictureInput.files[0]
+    ) {
+      btnAddPhoto.disabled = true;
+    } else {
+      btnAddPhoto.disabled = false;
+    }
+  }
   formSubmit.addEventListener("submit", (event) => {
     event.preventDefault();
     //verification si les champs sont correctement saisie//
-    const inputTitle = document.getElementById("title");
-    const selectInput = document.getElementById("categorie");
-    const errorMessage = document.querySelector(".errorMsg");
+
     if (
       inputTitle.value.trim() === "" ||
-      selectInput.value === "" ||
+      selectInputForm.value === "" ||
       !addPictureInput.files[0]
     ) {
       errorMessage.textContent = "Veuillez remplir correctement les champs";
       return;
     }
+
     //creation form vide//
     const formData = new FormData();
 
@@ -329,9 +350,6 @@ if (localStorage.getItem("token")) {
         if (response.ok) {
           createWorkItem(newWork);
           createModalItem(newWork);
-          formSubmit.reset();
-          resetPictureArea();
-
           errorMessage.textContent = "";
           showGallery();
         } else {
@@ -340,6 +358,10 @@ if (localStorage.getItem("token")) {
         }
       }),
     );
+  });
+
+  formSubmit.addEventListener("input", (e) => {
+    checkForm(e);
   });
 }
 //fin du mode edition//
