@@ -7,6 +7,14 @@
 Projet réalisé dans le cadre de la formation **Développeur Web d'OpenClassrooms**.
 Sophie Bluel, architecte d'intérieur, souhaitait un site portfolio dynamique, avec un espace d'administration pour gérer elle-même ses projets. Ma mission : développer le **front-end en JavaScript** et le connecter à l'**API REST** fournie (Node.js / Express).
 
+## Aperçu
+
+| Galerie et filtres | Connexion |
+|:---:|:---:|
+| ![Galerie filtrée par catégorie](screenshots/accueil-filtres.jpg) | ![Page de connexion](screenshots/connexion.jpg) |
+| **Mode édition : suppression** | **Mode édition : ajout d'un projet** |
+| ![Modale de suppression des projets](screenshots/modale-galerie.jpg) | ![Formulaire d'ajout d'un projet](screenshots/modale-ajout.jpg) |
+
 ## Fonctionnalités
 
 **Côté visiteur**
