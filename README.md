@@ -9,10 +9,12 @@ Sophie Bluel, architecte d'intérieur, souhaitait un site portfolio dynamique, a
 
 ## Aperçu
 
-| Galerie et filtres | Connexion |
+| Page d'accueil | Galerie filtrée par catégorie |
 |:---:|:---:|
-| ![Galerie filtrée par catégorie](screenshots/accueil-filtres.jpg) | ![Page de connexion](screenshots/connexion.jpg) |
-| **Mode édition : suppression** | **Mode édition : ajout d'un projet** |
+| ![Page d'accueil](screenshots/accueil.jpg) | ![Galerie filtrée par catégorie](screenshots/accueil-filtres.jpg) |
+| **Connexion** | **Mode édition** |
+| ![Page de connexion](screenshots/connexion.jpg) | ![Page d'accueil en mode édition](screenshots/mode-edition.jpg) |
+| **Suppression de projets** | **Ajout d'un projet** |
 | ![Modale de suppression des projets](screenshots/modale-galerie.jpg) | ![Formulaire d'ajout d'un projet](screenshots/modale-ajout.jpg) |
 
 ## Fonctionnalités
